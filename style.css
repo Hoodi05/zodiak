@@ -1,0 +1,77 @@
+body{
+
+    background-image: url('https://static.vecteezy.com/system/resources/previews/003/758/693/original/zodiac-signs-pattern-astrological-seamless-background-for-textile-wallpaper-vector.jpg');
+    color: white;
+    
+    }
+    
+    #ramka{
+    
+    width: 1100px;
+    height: 900px;
+    border: solid 1px white;
+    background-color: #2f73bd;
+    border-radius: 50px;
+    
+    
+    }
+    #btn{
+      background-color: white;
+      color: black;
+      border: 2px solid #2b5a8c;
+      border-radius: 20px;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 18px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+    }
+    
+    #btn:hover{
+    background-color: #2b5a8c;
+    color: white;
+    border: 2px solid #2b5a8c;
+    }
+
+    @media screen and (max-width:910px){
+
+      #ramka{
+    
+        width: 600px;
+        height: 800px;
+        border: solid 1px white;
+        background-color: #2f73bd;
+        border-radius: 50px;
+        
+        
+        }
+        #btn{
+          background-color: white;
+          color: black;
+          border: 2px solid #2b5a8c;
+          border-radius: 20px;
+          padding: 16px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+          transition-duration: 0.4s;
+        }
+        
+        #btn:hover{
+        background-color: #2b5a8c;
+        color: white;
+        border: 2px solid #2b5a8c;
+        }
+
+        #img{
+
+          width:300px ;
+          height:300px ;
+
+        }
+
+    }

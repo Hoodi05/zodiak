@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Znaki zodiaku</title>
+  </head>
+  <body>
+    <center>
+    <div id="ramka">
+    <h1>Podaj datę urodzenia</h1>
+  <form method="POST">
+    <input type="date" name="data"><br><br>
+    <input type="submit" name="sprawdz" id="btn" value="sprawdz swój znak">
+    <h3>Twoj data urodzenia to: </h3>
+    <?php zodiak();  ?>
+  </div>
+  </center>
+  </form>
+
+
+  </body>
+</html>
+
+
+<?php
+
+
+function zodiak(){
+
+$data = $_POST['data'];
+$dzien = substr($_POST['data'],8,2);
+$miesiac = substr($_POST['data'],5,2);
+
+echo $data;
+
+$zodiak="";
+
+if(($miesiac==8 && $dzien>=23) || ($miesiac==9 && $dzien<=22)) $zodiak="<h2>panna</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/panna.png' id='img'>";
+if(($miesiac==9 && $dzien>=23) || ($miesiac==10 && $dzien<=22)) $zodiak="<h2>waga</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/waga.png' id='img'>";
+if(($miesiac==10 && $dzien>=23) || ($miesiac==11 && $dzien<=21)) $zodiak="<h2>skorpion</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Skorpion.png' id='img'>";
+if(($miesiac==11 && $dzien>=22) || ($miesiac==12 && $dzien<=21)) $zodiak="<h2>strzelec</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Strzelec.png' id='img'>";
+if(($miesiac==12 && $dzien>=22) || ($miesiac==1 && $dzien<=19)) $zodiak="<h2>koziorozec</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/koziorozec.png' id='img'> ";
+if(($miesiac==1 && $dzien>=20) || ($miesiac==2 && $dzien<=18)) $zodiak="<h2>wodnik</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Wodnik.png' id='img'>";
+if(($miesiac==2 && $dzien>=19) || ($miesiac==3 && $dzien<=20)) $zodiak="<h2>ryby</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Ryby.png' id='img'>";
+if(($miesiac==3 && $dzien>=21) || ($miesiac==4 && $dzien<=19)) $zodiak="<h2>baran</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Baran.png' id='img'>";
+if(($miesiac==4 && $dzien>=20) || ($miesiac==5 && $dzien<=20)) $zodiak="<h2>byk</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Byk.png' id='img'>";
+if(($miesiac==5 && $dzien>=21) || ($miesiac==6 && $dzien<=20)) $zodiak="<h2>bliznieta</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Bliznieta.png' id='img'>";
+if(($miesiac==6 && $dzien>=21) || ($miesiac==7 && $dzien<=22)) $zodiak="<h2>rak</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/Rak.png' id='img'>";
+if(($miesiac==7 && $dzien>=23) || ($miesiac==8 && $dzien<=22)) $zodiak="<h2>lew</h2><br><br><img src='https://wszystkiesymbole.pl/wp-content/uploads/2017/04/lew.png' id='img'>";
+
+echo "<h3>Twoj znak zodiaku to: </h3><br>".$zodiak;
+
+
+
+
+
+}
+
+
+
+
+
+?>
